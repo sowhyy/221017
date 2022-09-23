@@ -1,0 +1,423 @@
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .image {
+  min-height: 400px;
+}
+.about .content {
+  padding: 30px 12px;
+}
+.about .content h3 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--bs-primary);
+  font-family: var(--font-default);  
+}
+
+.about .content p {
+  margin-bottom: 20px;
+  opacity: .8;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.about .content .count-box {
+  padding: 20px 0;
+  width: 100%;
+}
+
+.about .content .count-box i {
+  display: block;
+  font-size: 35px;
+  color: var(--bs-primary);
+  float: left;
+  line-height: 0;
+}
+
+.about .content .count-box span {
+  font-size: 30px;
+  line-height: 20px;
+  display: block;
+  font-weight: 500;
+  margin-left: 50px;
+  font-family: var(--font-secondary);
+}
+
+.about .content .count-box p {
+  padding: 15px 0 0 0;
+  margin: 0 0 0 50px;
+  font-family: var(--font-default);
+  font-size: 14px;
+  opacity: .8;
+}
+
+
+
+@media (max-width: 991px) {
+  .about .image {  text-align: center;  }
+  .about .image img {  max-width: 80%;  }
+}
+@media (max-width: 667px) {
+  .about .image img {  max-width: 100%;  }
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 50px;
+  display: block;
+  background: none;
+}
+
+.skills .progress .skill {
+  padding: 10px 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: var(--font-default);
+}
+
+.skills .progress-bar-wrap {
+  background: rgba(0,0,0,.05)
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--bs-primary);
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-family: var(--font);
+  color: var(--bs-primary);
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--bs-red);
+  position: relative;
+}
+.resume .resume-item p {
+  padding-bottom: 10px;
+  line-height: 20px;
+  
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: rgb(120,194,173,.2);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: var(--font);
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+  list-style: inside ;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--white);
+  border: 2px solid var(--bs-red);
+}
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: var(--white);
+  border-radius: 50px;
+  padding: 2px 15px;
+  box-shadow: 0px 2px 15px rgba(0,0,0,.1);
+
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 15px 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--bs-primary);
+  margin-bottom: 5px;
+}
+
+.portfolio #portfolio-flters li:hover {
+  color: var(--bs-hover);
+  border-bottom: 1px solid var(--bs-red);
+}
+.portfolio #portfolio-flters li.filter-active {
+  color: var(--bs-red);
+}
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+/* .img-fluid {
+  width: 100%;
+  height: fit-content(300px);
+} */
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(120,194,173,.8);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: var(--white);
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+
+  margin-bottom: -20px;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: var(--white);
+  margin: 0 2px;
+  font-size: 30px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: var(--bs-red);
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+  top: calc(50% - 48px);
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-links {
+  opacity: 1;
+  bottom: calc(50% - 50px);
+}
+
+/*--------------------------------------------------------------
+# Contact Me
+--------------------------------------------------------------*/
+.contact .info-box {
+  text-align: center;
+  padding: 20px 0 30px 0;
+}
+.contact .info-box i.bx {
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 15px;
+  color: var(--bs-primary);
+  background: var(--white);
+  border: 1px solid var(--bs-primary);
+}
+.contact .info-box a:hover i.bi-github {
+  color: var(--white);
+  border-color: var(--bs-primary);
+  background: var(--bs-primary);
+}
+
+
+.contact .info-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.contact .social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.contact .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  line-height: 1;
+  margin: 0 8px;
+  transition: 0.3s;
+  padding: 14px;
+  border-radius: 50px;
+  color: var(--bs-hover);
+  border: 1px solid var(--bs-hover);
+}
+.contact .social-links a:hover {
+  color: var(--white);
+  border-color: var(--bs-primary);
+  background: var(--bs-primary);
+}
+.contact .info-box i.bx a:hover {
+  color: var(--white);
+  border-color: var(--bs-primary);
+  background: var(--bs-primary);
+}
+
+
+/* 이메일 */
+.contact .php-email-form .error-message {
+  display: none;
+  color: var(--white);
+  background: var(--bs-primary);
+  text-align: left;
+  padding: 20px;
+}
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+.contact .php-email-form .sent-message {
+  display: none;
+  color: var(--white);
+  background: var(--bs-red);
+  text-align: center;
+  padding: 15px;
+}
+.contact .php-email-form .loading {
+  display: none;
+  background: var(--white);
+  text-align: center;
+  padding: 15px;
+}
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 1px solid var(--bs-hover);
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  font-size: 14px;
+}
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--bs-primary);
+}
+.contact .php-email-form button[type=submit] {
+  border: 1px solid var(--bs-primary);
+  background: var(--bs-primary);
+  color: var(--white);
+  border: 0;
+  padding: 10px 24px;
+  border-radius: 50px;
+}
+.contact .php-email-form button[type=submit]:hover {
+  border: 1px solid var(--bs-primary);
+  background: var(--white);
+  color: var(--bs-primary);
+}
+
+@-webkit-keyframes animate-loading {
+  0% {  transform: rotate(0deg);  }
+  100% {  transform: rotate(360deg);  }
+}
+@keyframes animate-loading {
+  0% {  transform: rotate(0deg);  }
+  100% {  transform: rotate(360deg);  }
+}

@@ -1,0 +1,53 @@
+
+::selection{background-color: rgba(255,120,81,.5);color:#222;}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: var(--font);
+}
+a {
+  text-decoration: none; color: inherit;
+  color: var(--bs-primary);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--bs-hover);
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 300;
+  background: var(--bs-primary);
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 26px;
+  line-height: 0;
+}
+.back-to-top:hover {
+  color: var(--bs-hover);
+  background: var(--white);
+  border: 1px solid var(--bs-hover);
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
